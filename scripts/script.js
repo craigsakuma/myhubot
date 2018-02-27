@@ -11,12 +11,35 @@
 //
 
 var die = [1,2,3,4,5,6]
+var eightBall = ['It is certain',
+                  'It is decidedly so',
+                  'Without a doubt',
+                  'Yes definitely',
+                  'You may rely on it',
+                  'As I see it, yes',
+                  'Most likely',
+                  'Outlook good',
+                  'Yes',
+                  'Signs point to yes',
+                  'Reply hazy try again',
+                  'Ask again later',
+                  'Better not tell you now',
+                  'Cannot predict now',
+                  'Concentrate and ask again',
+                  "Don't count on it",
+                  'My reply is no',
+                  'My sources say no',
+                  'Outlook not so good',
+                  'Very doubtful']
 
 module.exports = function(robot) {
   //  YOUR CODE HERE
   //  Example
    robot.hear(/roll dice/i, function(msg) {
      return msg.send('you rolled: ' + msg.random(die) + ' & ' +msg.random(die));
+   });
+   robot.hear(/magic 8ball/i, function(msg) {
+     return msg.send(msg.random(eightBall))
    });
 }
 
