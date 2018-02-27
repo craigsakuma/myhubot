@@ -16,7 +16,7 @@ module.exports = function(robot) {
   //  YOUR CODE HERE
   //  Example
    robot.hear(/roll dice/i, function(msg) {
-     return msg.send(msg.random(die));
+     return msg.send('you rolled: ' + msg.random(die) + ' & ' +msg.random(die));
    });
 }
 
