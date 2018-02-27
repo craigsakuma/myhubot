@@ -10,13 +10,21 @@
 // Commands:
 //
 
+var die = [1,2,3,4,5,6]
+
 module.exports = function(robot) {
   //  YOUR CODE HERE
   //  Example
-   robot.hear(/warriors/i, function(msg) {
-     return msg.send("I love kevin durant!");
+   robot.hear(/roll dice/i, function(msg) {
+     return msg.send(msg.random(die));
    });
 }
+
+
+
+
+
+
 
 /************************************
 
