@@ -38,7 +38,7 @@ module.exports = function(robot) {
    robot.hear(/roll dice/i, function(msg) {
      return msg.send('you rolled: ' + msg.random(die) + ' & ' +msg.random(die));
    });
-   robot.hear(/magic 8ball/i, function(msg) {
+   robot.respond(/magic 8ball/i, function(msg) {
      return msg.send(msg.random(eightBall))
    });
 }
